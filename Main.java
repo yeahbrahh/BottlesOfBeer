@@ -32,14 +32,17 @@ Take one down and pass it around, 0 bottles of beer on the wall.
 0 bottles of beer on the wall, 0 bottles of beer.
 Go to the store and buy some more, 5 bottles of beer on the wall.*/
 
-import java.util.Scanner;
+import java.util.Scanner; // import Scanner class
 public class Main {
-    static Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);// assign Scanner
+   //Prompts User and Receives Input
     static int input() {
         System.out.print("How many bottles are you starting with? ");
-        return sc.nextInt();
+        return sc.nextInt(); // returns type int
     }
-
+    // Main Method
+    // For loop to call and decrement input() method
+    // If else statement to print singular "bottle" at end of program
     public static void main(String[] args) {
         for (int i = input() ; i  > 0 ; i--) {
       if (i == 1){
