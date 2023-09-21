@@ -37,21 +37,25 @@ public class Main {
     static Scanner sc = new Scanner(System.in);// assign Scanner
    //Prompts User and Receives Input
     static int input() {
-        System.out.print("How many bottles are you starting with? ");
+        System.out.print("\nHow many bottles are you starting with? ");
         return sc.nextInt(); // returns type int
     }
     // Main Method
     // For loop to call and decrement input() method
     // If else statement to print singular "bottle" at end of program
     public static void main(String[] args) {
-        for (int i = input() ; i  > 0 ; i--) {
-      if (i == 1){
-          System.out.println("1 bottle of beer on the wall, 1 bottle of beer.\n" +
-                  "Take it down and pass it around, no more bottles of beer on the wall.");
+        int b = input(); // reassigned input to variable 'b' so I could pass the original value down
+        for (int i = b ; i  > 0 ; i--) { // changed from i = input() to i = b
+      if (i == 1) {
+          System.out.println("\n1 bottle of beer on the wall, 1 bottle of beer.\n");
+                 System.out.println("\nTake it down and pass it around,no more bottles of beer on the wall:( ");
       } else
-            System.out.print( i + " bottles of beer on the wall, " + i + " bottles of beer.\n");
-         System.out.println("\nTake one down and pass it around, " + (i - 1) + " bottles of beer on the wall.");
-        }
+            System.out.print( "\n" + i + " bottles of beer on the wall, " + i + " bottles of beer.\n");
+        System.out.println("\nTake one down and pass it around, " + (i - 1) + " bottles of beer on the wall.");
 
     }
+        // Fixed code
+        System.out.println("\nGo to the store and buy some more. " + b + " bottles of beer on the wall!!! ");
+    }
+
 }
